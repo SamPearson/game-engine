@@ -1,0 +1,12 @@
+this is going to get messy, so remember to call these as needed and release them when not.
+
+walking right
+cloudright1.bmp
+cloudright2.bmp
+cloudright3.bmp
+
+walking left
+cloudleft1.bmp
+cloudleft2.bmp
+cloudleft3.bmp
+

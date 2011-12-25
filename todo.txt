@@ -1,0 +1,8 @@
+1 add sprites that block off access to alton forest and that building that doesn't have a map.
+2 add collision to support the stuff in step 1.
+3 delete all unnecessary files from the game folder (alton forest maps, etc.)
+
+
+4 add sprites that add variety to the alton city map
+5 add collision to support the sprites in step 4
+6 rename some variables, clean up the code and it's done! First project completed.

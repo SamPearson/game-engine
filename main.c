@@ -1,7 +1,9 @@
-//============================================
-// 		NECESSARY EVIL		                 =
-//============================================
-
+/*
+*
+*	A game engine written in c with allegro
+*
+*
+*/
 
 
 #include <allegro.h>

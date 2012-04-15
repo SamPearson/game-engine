@@ -1,5 +1,9 @@
-// Part of the stonex map editor
-
+/*
+*
+*	The map/level editor for the game engine
+*
+*	
+*/
 
 #include <allegro.h>
 #include "mapInfo.h"

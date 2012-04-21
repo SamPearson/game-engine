@@ -1,5 +1,11 @@
-//hey guys, graphics here.
-
+/*
+*
+* Graphics engine (should probably see a .c file)
+* character objects and map objects should be housed in a separate .h file
+*
+*
+*
+*/
 #include "debug.h"
 
 #include <stdio.h>

@@ -1,4 +1,14 @@
-//mapswitch.h , I'll create rooms.
+/*
+*
+* This .h file defines the fade in and fade out functions.
+*
+* It also defines the collision boundaries for all doors and objects.
+* object_min/max_x/y[]
+* 
+* 
+*/
+
+
 extern int current_map;
 extern BITMAP *background_layer;
 extern BITMAP *sprite_layer;

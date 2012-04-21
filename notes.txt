@@ -1,2 +1,0 @@
-requires liballegro4.2-dev 
-

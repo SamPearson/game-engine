@@ -1,8 +1,27 @@
-1 add sprites that block off access to alton forest and that building that doesn't have a map.
-2 add collision to support the stuff in step 1.
-3 delete all unnecessary files from the game folder (alton forest maps, etc.)
 
 
-4 add sprites that add variety to the alton city map
-5 add collision to support the sprites in step 4
-6 rename some variables, clean up the code and it's done! First project completed.
+Convert to a tile-based system
+tiles will be structs, they will hold the following:
+	bool collision, populated
+	int backgroundTile, foregroundTile
+	//these ints will be used as element identifiers for the
+	//background and foreground tile bitmap arrays
+
+class map
+	string name
+	string pathToTileset
+	int height
+	int width
+
+class character
+	string name
+	int Xposition, yPosition
+	bitmap array of the spritesheet
+
+
+
+
+will require an overhaul of the gfx engine and make most of mapswitch.h 
+irrelevant. 
+
+

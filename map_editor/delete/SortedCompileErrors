@@ -1,0 +1,44 @@
+
+collect2: ld returned 1 exit status
+sam@samathome:/code/game-engine/map_editor$ g++ main.cpp tools.cpp save.cpp input.cpp `allegro-config --libs`
+sam@samathome:/code/game-engine/map_editor$ g++ main.cpp tools.cpp save.cpp input.cpp `allegro-config --libs` > CompileErrors.txt
+/tmp/ccJNtLBY.o: In function `get_user_input()':
+/tmp/ccN89Fez.o: In function `copy_paste(int)':
+/tmp/ccN89Fez.o: In function `fill_button()':
+/tmp/ccN89Fez.o: In function `save_as_bitmap()':
+/tmp/ccN89Fez.o: In function `test_function()':
+/tmp/ccN89Fez.o: In function `toggle_grids()':
+/tmp/ccR0ZOon.o: In function `main':
+/tmp/ccS6KcWH.o: In function `get_user_input()':
+/tmp/ccsxdhEp.o: In function `load_map()':
+/tmp/ccsxdhEp.o: In function `save_map()':
+/tmp/ccSzAANL.o: In function `load_map()':
+/tmp/ccSzAANL.o: In function `save_map()':
+/tmp/ccuImeB7.o: In function `copy_paste(int)':
+/tmp/ccuImeB7.o: In function `fill_button()':
+/tmp/ccuImeB7.o: In function `save_as_bitmap()':
+/tmp/ccuImeB7.o: In function `test_function()':
+/tmp/ccuImeB7.o: In function `toggle_grids()':
+/tmp/ccUNvQfQ.o: In function `main':
+undefined references to `tile_width' follow
+undefined reference to `current_tile'
+undefined reference to `draw_grid(int, int, int, int, int, BITMAP*, int)'
+undefined reference to `draw_grid_on_map'
+undefined reference to `draw_grid_on_tiles'
+undefined reference to `gfx_engine()'
+undefined reference to `map_buffer'
+undefined reference to `mapbuffer_height_in_tiles'
+undefined reference to `mapbuffer_location_x'
+undefined reference to `mapbuffer_location_y'
+undefined reference to `mapbuffer_width_in_tiles'
+undefined reference to `map_init()'
+undefined reference to `map_position_x'
+undefined reference to `map_position_y'
+undefined reference to `map_tile_db'
+undefined reference to `screen_buffer'
+undefined reference to `tile'
+undefined reference to `tilebuffer_height_in_tiles'
+undefined reference to `tilebuffer_location_x'
+undefined reference to `tilebuffer_location_y'
+undefined reference to `tilebuffer_width_in_tiles'
+undefined reference to `tile_width'

@@ -1,0 +1,7 @@
+
+
+Learn to better control which variables are available to what functions. Practice on new, onepage programs.
+
+break more things off into smaller functions. 
+	"copy" and "paste" should be two functions, not one.
+	"select area" should be its own function. "copy" should just copy the tile values from the area returned by "select area". This will allow for fill area to be programmed easily.

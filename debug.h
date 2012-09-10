@@ -2,7 +2,7 @@
 extern int door_min_x[10],door_min_y[10],door_max_x[10],door_max_y[10];
 extern int n;
 extern int cloudx,cloudy;
-extern int sleepytime, framesps;
+extern int sleep_time, framesps;
 void debug_drawdoors()
 {
 
@@ -22,7 +22,7 @@ void debug_drawdoors()
 
  void debug_textwindow()
  {
-	textprintf_ex(screen, font, 0, 10, makecol(255,255,255), makecol(0,0,0), "sleep time: %i", sleepytime);
+	textprintf_ex(screen, font, 0, 10, makecol(255,255,255), makecol(0,0,0), "sleep time: %i", sleep_time);
 	textprintf_ex(screen, font, 0, 20, makecol(255,255,255), makecol(0,0,0), "frames per second: %i", framesps);
 	textprintf_ex(screen, font, 0, 30, makecol(255,255,255), makecol(0,0,0), "cloudx: %i", cloudx);
 	textprintf_ex(screen, font, 0, 40, makecol(255,255,255), makecol(0,0,0), "cloudy: %i", cloudy);

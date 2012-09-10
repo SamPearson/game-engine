@@ -32,7 +32,9 @@ extern int map_width[10];
 BITMAP *sprite_buffer;
 BITMAP *collision_buffer;
 
-
+//Positions are hard-coded, these values will be abandoned
+//as the game moves to a tile-based map system. MapSystem.hpp
+//is replacing this file, see there for more
 int object_min_x[1000];
 int object_max_x[1000];
 int object_min_y[1000];
@@ -41,66 +43,14 @@ int door_min_x[10];
 int door_min_y[10];
 int door_max_x[10];
 int door_max_y[10];
+
 extern int n;
 
 #define BLACK makecol(0,0,0)
 extern int cloudx;
 extern int cloudy;
 extern int cnt;
-//=====================================================================
-//      fading functions. highcolor_fade_in() and highcolor_fade_out()=
-//=====================================================================
-void highcolor_fade_out(int speed)
-{
-    BITMAP *bmp_orig, *bmp_buff;
 
-    if ((bmp_orig = create_bitmap(SCREEN_W, SCREEN_H)))
-    {
-        if ((bmp_buff = create_bitmap(SCREEN_W, SCREEN_H)))
-        {
-            int a;
-            blit(screen, bmp_orig, 0,0, 0,0, SCREEN_W, SCREEN_H);
-            if (speed <= 0) speed = 16;
-        
-            for (a = 255-speed; a > 0; a-=speed)
-            {
-                clear(bmp_buff);
-                set_trans_blender(0,0,0,a);
-                draw_trans_sprite(bmp_buff, bmp_orig, 0, 0);
-                vsync();
-                blit(bmp_buff, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
-            }
-            destroy_bitmap(bmp_buff);
-        }
-        destroy_bitmap(bmp_orig);
-    }
-
-    rectfill(screen, 0,0, SCREEN_W,SCREEN_H, makecol(0,0,0));
-}
-
-
-void highcolor_fade_in(BITMAP *bmp_orig, int speed)
-{
-   BITMAP *bmp_buff;
-
-    if ((bmp_buff = create_bitmap(SCREEN_W, SCREEN_H)))
-    {
-        int a;
-        if (speed <= 0) speed = 16;
-        
-        for (a = 0; a < 256; a+=speed)
-        {
-            clear(bmp_buff);
-            set_trans_blender(0,0,0,a);
-            draw_trans_sprite(bmp_buff, bmp_orig, 0, 0);
-            vsync();
-            blit(bmp_buff, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
-        }
-        destroy_bitmap(bmp_buff);
-    } 
-
-    blit(bmp_orig, screen, 0,0, 0,0, SCREEN_W, SCREEN_H);
-}
 
 //============================================================================
 // 		     initialising the map with map_change()                          =
@@ -160,12 +110,12 @@ door_max_x[4]=1870;
 door_max_y[4]=1151;	
 
 //alton city>> alton forest door
-/*						 alton forest has been cut.
+//alton forest has been cut, this may not work
 door_min_x[5]=1024;
 door_min_y[5]=0;
 door_max_x[5]=1184;
-door_max_y[5]=20;
-*/
+door_max_y[5]=50;
+
 //the map boundaries
 object_min_x[0]=0;
 object_max_x[0]=1907;
@@ -489,7 +439,7 @@ draw_sprite(scroll, sprite_buffer,0,0);
 
 
 highcolor_fade_in(scroll,10);
-sleepytime=15.0;
+sleep_time=15.0;
 
 return 0;
 }

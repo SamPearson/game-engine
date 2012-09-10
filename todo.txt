@@ -1,27 +1,24 @@
-
-
+Biggest todo:
 Convert to a tile-based system
-tiles will be structs, they will hold the following:
-	bool collision, populated
-	int backgroundTile, foregroundTile
-	//these ints will be used as element identifiers for the
-	//background and foreground tile bitmap arrays
+
+This will require a huge overhaul to the gfx 
+engine simultaneously with the mapping system 
+and the game will likely not compile for a while.
+This will require thorough planning.
 
 class map
-	string name
-	string pathToTileset
+	bitmap Tileset.bmp
 	int height
 	int width
+	2d array of struct tiles
+		bool interactable
+		bool collision
+		int background layer image
+		int foreground layer image
 
 class character
-	string name
 	int Xposition, yPosition
 	bitmap array of the spritesheet
 
-
-
-
-will require an overhaul of the gfx engine and make most of mapswitch.h 
-irrelevant. 
 
 

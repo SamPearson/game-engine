@@ -160,13 +160,13 @@ if (cloud_direction==4)
 
 void get_fps()
 {
-extern int sleepytime;
+extern int sleep_time;
 extern int target_fps;
 framesps=mainloopticks;	
 if (framesps<target_fps-5)
-	sleepytime-=2;
+	sleep_time-=2;
 if (framesps>target_fps+5)
-	sleepytime+=2;
+	sleep_time+=2;
 if (framesps<10)
 	framesps=10;
 
